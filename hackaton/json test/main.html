@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" content="text/html">
+	<title>Events</title>
+	<style></style>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+	<body>
+		<div class="main_page">
+			<div class="header">
+
+				<div class="header_cont">
+					
+					<div class="header_logo">
+						<div class="smth">
+						🎓
+						</div>
+						UCU
+					</div>
+					<div class="header_citate">
+						<p><italic>Non progrede, est regrede</italic></p>
+					</div>
+					<div class="autorisation">
+						<form action="#", method = "post">
+						    <div class="input_login">
+						        <input type="text" placeholder="login">
+						    </div>
+						    <div class="input_password">
+						    	<input type="password" name="" id="" placeholder="password">
+						    </div>
+						</form>
+						<div >
+	    					<input type = "submit" value = "Submit" / >
+						</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="main">
+				<div class="main_container">
+					<!-- <div class="day1">
+						<table></table>
+					</div>
+					<div class="day2">
+						<table></table>s
+					</div>
+					<div class="day3">
+						<table></table>
+					</div>
+					<div class="day4">
+						<table></table>
+					</div>
+					<div class="day5">
+						<table></table>
+					</div>
+					<div class="day6">
+						<table></table>
+					</div>
+					<div class="day7">
+						<table></table>
+					</div> -->
+				</div>
+				<!-- <button id="runButton">Run</button> -->
+			</div>
+			<div class="footer">
+				
+			</div>
+		</div>
+
+		<script type="text/javascript">
+
+		var getJSON = function (url, callback) {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", url, true);
+			xhr.responseType = "json"
+			xhr.onload = function() {
+				var status = xhr.status;
+				if (status === 200) {
+	    			callback(null, xhr.response);
+	    		}
+	    		else {
+	    			callback(status, xhr.response)
+	    		}
+			}
+		xhr.send();
+		}
+
+		</script>
+	</body>
+</html>

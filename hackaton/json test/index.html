@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flask app</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  </head>
+<body>
+
+  <div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <form name = "textbox" id = "textbox">
+      <input id ="textbox" name="textbox" type="text" placeholder="Search..">
+      <button type="submit">submit</button>
+    </form>
+  </div>
+
+  <p>you searched: {{search}} </p>
+
+  <div id="div1">
+  <p id="p1"></p>
+  <p id="p2"></p>
+  </div>
+
+<script>
+
+var value = $('.textbox').val();
+//alert(value);
+$.ajax({
+  type: 'POST',
+  url: "/parse_data",
+  data: JSON.stringify(value)
+  contentType: 'application/json',
+  success: function(data){
+    alert("success")
+  }
+});
+
+var jsonz = {{ entries|tojson }};
+
+var s = JSON.parse(jsonz);
+
+var i;
+for (i = 0; i < s.length; i++) {
+  var para = document.createElement("p");
+  var node = document.createTextNode(s[i].product_name + "\n" + s[i].product_link);
+  para.appendChild(node);
+
+  var element = document.getElementById("div1");
+  element.appendChild(para);
+}
+
+
+
+
+//document.getElementById("user").innerHTML =
+//obj;
+//"Name: " + obj.product_name + "<br>" +
+//"Location: " + obj.product_link;
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+films_keywords_v1.py
+1) функція find_films, виправити на sum([len(film_keywords[keyw1]), len(film_keywords[keyw2])])
+(початково вказані keyw1 двічі)
+2) функцію find_two_biggest1 замінив на ту, яка працює за o(2n)=n
+3) в функції input_from_file фрагмент line.strip().split('\t') повторювався двічі - виніс окремо
+4) замінив find_films на лямбда-функцію
+5) написав генератор словника в функції input_from_file
+6) зменшив код функції freq_keywords
