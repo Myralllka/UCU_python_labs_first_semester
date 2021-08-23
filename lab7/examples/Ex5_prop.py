@@ -1,9 +1,0 @@
-events = [5, 12, 14, 5, 1]
-#events = ['5', '12', '14', '5', '1']
-print("events = ", events)
-print("len =", len(events))
-print("min =", min(events))
-print("max =", max(events))
-print("sum =", sum(events))
-print("sorted =", sorted(events))
-print("events = ", events)
